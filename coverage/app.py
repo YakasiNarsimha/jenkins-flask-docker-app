@@ -1,10 +1,10 @@
 from flask import Flask
-app=Flask(__name__)
+
+app = Flask(__name__)
 
 @app.route("/")
-def hello():
-    return "Hllo, Jenkins CI/CD from Flask App on Windows!"
+def home():
+    return "HEllo, Jenkins CI/CD from Flask App on Windows!"
 
-
-if __name__=="__main__":
-    app.run(host="0.0.0.0",port=5000)
+if __name__ == "__main__":
+    app.run(debug=True)
