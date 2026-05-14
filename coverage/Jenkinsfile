@@ -12,7 +12,7 @@ pipeline{
                   echo "========executing settingup environment========"
                 bat '''
                 python -m venv .venv1
-                call .venv\\Scripts\\activate
+                call .venv1\\Scripts\\activate
                 pip install -r requirements.txt
                 '''
             }
@@ -21,7 +21,7 @@ pipeline{
             steps{
                 bat '''
                 echo "========executing unittests========"
-                call .venv\\Scripts\\activate
+                call .venv1\\Scripts\\activate
                 pytest tests/
                 '''
             }
